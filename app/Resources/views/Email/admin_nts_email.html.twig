@@ -1,0 +1,27 @@
+<div>
+<p>Hello Admin,</p>
+<p>You have just subscribed to School and Teaching Practices Survey.
+    Please send the link below to your teachers so that they can use it to register for the STP Teacher survey
+</p>
+<p>
+    <a href="{{ app.request.getSchemeAndHttpHost() ~ '/registersurvey/nts/'~ntsid}}">{{ app.request.getSchemeAndHttpHost() ~ '/registersurvey/nts/'~ntsid}}</a>
+</p>
+</div>
+
+<div>Dear Survey Administrator,</div>
+<div>[When you are ready, please forward this email to all non-teaching staff in your school.]</div>
+<div style="margin-top: 40px;">Kia ora,</div>
+<div>
+<p>Your school is using the 2017 School and Teaching Practices Survey to find out more about what is working well and what needs further development.
+    It has provided useful learning for school leaders and those who work with them.</p>
+<p>Please support your Principal and school by taking part, so that the survey results are representative of all the school’s teachers.</p>
+<p>The survey will take about 10 – 15 minutes to complete.  It is confidential, and you can complete it at school or home.  To take part, please click on the link below, and register your email address.
+    You will then receive your own unique survey token.</p>
+<p>Non Teaching Staff Registration Link:  <a href="{{ app.request.getSchemeAndHttpHost() ~ '/registersurvey/nts/'~ntsid}}">{{ app.request.getSchemeAndHttpHost() ~ '/registersurvey/nts/'~ntsid}}</a></p>
+</div>
+
+<div style="margin-top: 10px;">
+<p>Ngā mihi nui,</p>
+<div>NZCER Assessment Services Team</div>
+<a href="mailto:assessmentservices@nzcer.org.nz">assessmentservices@nzcer.org.nz</a>
+</div>

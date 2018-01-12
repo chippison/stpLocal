@@ -1,0 +1,34 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3>About Principal Leadership</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis turpis maximus, consequat nisl et, congue nunc. Aliquam sit amet leo posuere, tempor massa in, pellentesque purus. In lacinia tincidunt ante, non tempus nisl. Donec vel tristique velit. Nunc nec tortor diam. Sed vel lacus at arcu commodo efficitur sed id nibh. Etiam semper dolor ex, eget tempor odio dictum ac. Quisque ut sapien cursus sapien placerat dictum. Mauris eu libero a tortor rutrum suscipit a semper metus. Etiam at mi vulputate, ultrices sem et, consequat metus. In ac pretium elit. Fusce pharetra enim vitae orci dignissim elementum. Nullam et mi hendrerit augue sollicitudin congue tincidunt in libero. Suspendisse vulputate, nisl et mollis hendrerit, nisi lorem convallis ex, sed suscipit metus eros scelerisque sem.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Maecenas semper sapien et gravida porttitor. Nullam at metus pellentesque, vestibulum velit non, volutpat dolor. Phasellus quam risus, ullamcorper ac enim eget, tincidunt fringilla risus. Proin quis porta ex. Ut sem est, sagittis vel facilisis ac, porta sed sapien. Integer quis metus condimentum, vestibulum leo nec, vehicula augue. Sed erat est, consectetur vel risus vitae, venenatis euismod lectus. Etiam feugiat congue tristique. Pellentesque eu hendrerit justo. In erat augue, tincidunt a lorem egestas, gravida vehicula nisi. Nam viverra leo tortor, molestie pellentesque urna egestas a. Pellentesque hendrerit ante porta tellus finibus, eu mollis est ultricies. Nullam nibh ex, eleifend sed mi a, sodales euismod diam. Morbi quis arcu lacus. Nulla ac nibh sapien.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

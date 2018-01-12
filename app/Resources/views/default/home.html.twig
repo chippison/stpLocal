@@ -1,0 +1,98 @@
+ {% extends 'landing.html.twig' %}
+  {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" />
+ <style>
+    .col-md-8{
+        text-align: left;
+        font-family: 'Roboto',sans-serif;
+    }
+    .mybackground{
+        background-image: url('/images/Logins.png');
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        height: 50px;
+        line-height:50px;
+        width: 350px;
+        color: white;
+        font-family: 'Roboto',sans-serif;
+        text-align: center;
+    }
+    
+    @media (min-width: 992px){
+        .mybackground{
+            width: 280px;
+        }
+        .bigger p{
+            font-size: 0.8em
+        }
+        .bigger span{
+           width:270px;
+        }
+    }
+    @media(min-width: 1200px){
+        .mybackground{
+            width: 350px;
+        }
+        .bigger p{
+            font-size: 1em
+        }
+        .bigger span{
+            width: 345px
+        }
+    }
+ </style> 
+ {% endblock %}
+ {% block main_body %}
+<div class="section text-center" style="min-height: 75vh">
+    <div class="container card" style="padding-top: 20px">
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+{#                 <div style="" class="mybackground">  #}
+{#                     <span style="display: inline-block;vertical-align: middle;line-height: normal;font-size: 1em">Register my school <a href="{{ path('reg') }}" id="reg_btn" class="rob_btn btn" style="">Register</a></span>#}
+{#                 </div>#}
+                <div class="mybackground" style="margin-top: 20px;">  
+                    <span style="display: inline-block;vertical-align: middle;line-height: normal;width:138px;font-size: 1em">Login to view my school reports</span><a href="{{ path('login') }}" id="reg_btn" class="rob_btn btn" style="padding: 3.5px 18px ">Login</a>
+                </div>
+                <div class="mybackground bigger" style="height: 100px;margin-top: 20px;">  
+                    <span style="display: inline-block;vertical-align: middle;line-height: normal;font-size: 1em">
+                    <p style="margin-top:10px">Registration has now closed for 2017. Schools will continue to be able to login to view school reports.</p>
+
+                </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div>
+                   <p style="text-align: left;font-family: 'Roboto',sans-serif;">
+                        This online survey tool is designed to provide useful information for school inquiry, review, and development.
+                   </p>
+                   <p style="text-align: left;font-family: 'Roboto',sans-serif;">
+                        It can provide your school with important insights about teaching practices, school practices, and leadership.
+                   </p>
+                   <p style="text-align: left;font-family: 'Roboto',sans-serif;">
+                       The items come out of robust research on effective teaching and school practices and effective principal leadership. They are consistent with the New Zealand Curriculum, ERO’s School Evaluation Indicators, and the draft Standards for the Teaching Profession. Kāhui Ako can get a useful picture across their member schools.
+                  </p>
+                  <h4 class="myh4">The tool is free, quick, and confidential</h4>
+                  <p>The tool is free, and open for use in Terms 2 and 3 each year. It takes teachers around 15 to 20 minutes and principals around 10 to 15 minutes. Principals can choose when to close off the survey and will then immediately get the results. Participation is voluntary, and confidential. No individual teachers can be identified.</p>
+                  <h4 class="myh4">NZCER developed this tool</h4>
+                  <p>NZCER developed and hosts this tool. NZCER ensures the confidentiality of all data.  At the end of the year we will provide a national report that gives the Ministry of Education and the sector an overview of school strengths and needs, and the impact of changes such as Kāhui Ako. No individuals, individual schools, or Kāhui Ako will be identified or identifiable in the national overview.</p>
+                  <h4 class="myh4">Active support of collaborative Advisory Group</h4>
+                  <p>This survey was developed with the active support of an Advisory Group. The Advisory Group had representatives from NZEI, NZPF, NZAIMS, PPTA, SPANZ and NZSTA, working collaboratively with ERO, the Education Council, the Ministry of Education, and researchers and professional development providers. It has been trialled with a representative cross-section of schools. It is funded by the Ministry of Education.</p>
+                  <p>Find out more in <a href="{{ path('development') }}">More about the tool</a> and <a href="{{ path('tool-work') }}">Getting Started</a>
+                  <p style="text-align: left;font-family: 'Roboto',sans-serif;">
+                  <!-- Ready to start? Register <a href="{{ path('reg') }}" target="_blank">here</a> -->
+                  </p>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#home-nav a').addClass('active');
+});
+</script>
+{% endblock %}

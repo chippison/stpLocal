@@ -1,0 +1,65 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">Making use of the reports</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    This survey tool is designed to give principals and teachers useful food for thought. The items all come out of robust research on effective teaching, school and leadership practices. They don’t cover everything — that would take too long!
+                                </p>
+                                <p>They focus on some key areas where research shows the importance of the ways in which teachers and leaders work together, and the value of careful inquiry that uses good evidence.</p>
+                                <p>The reports aim to give you information about how much the school is making of its own strengths, what’s working well, what’s not working so well, and what is happening in areas that you are focusing on. They can provide baseline information alongside other information to identify areas for inquiry. They can help you gauge progress towards goals you’ve been working on, and, over time, the impact of that work.</p>
+                                <p>Some principals in the trial also saw the reports as providing useful evidence in relation to their own performance appraisal found the reports useful for goal-setting, and in inquiry work around their own effectiveness.  They are in a sense a form of 360 degree feedback.</p>
+                                <p>Principals can choose which reports to share with staff and the board. You may want to share them first with senior staff.  You may also want to share and discuss them with a critical friend, mentor, coach, or advisor.</p>
+                                <h4 class="myh4">The survey is voluntary</h4>
+                                <p>For the Teaching and School Practices tool to work as intended, it needs to remain voluntary for the principal and teachers, so that they feel able to respond honestly. It can be recommended by people who work with a school, but cannot be made compulsory. It has value and validity as a formative tool, not an accountability measure.</p>
+                                <p>The Teaching and School Practices tool may be counterproductive where a school is in strife, and where results are likely to be used combatively. </p>
+                                <h4 class="myh4">Open discussion of survey responses supports good practice</h4>
+                                <p>Our advice is to share the results in a setting in which open discussion of the patterns and questions that are important to the school can take place.</p>
+                                <p>Principals who found this survey’s predecessor (the Educational Leadership Practices survey) valuable have told us that they and their staff used the results to spark discussion of deeper aspects of pedagogy and how school processes could (better) support desired change.</p>
+                                <p>Where there was high trust, principals found it valuable to compare their answers with those of the teachers, and discuss why they gave the answers they did. What evidence had they been thinking of in terms of what was working well?</p>
+                                <p>Discussion about the meaning of items helps to build shared understandings in relation to a school’s work to optimise student learning. It can strengthen a collective approach that makes it easier for individual teachers and leaders to be effective.</p>
+                                <p>
+                                    Questions you might like to ask include:
+                                    <ul>
+                                        <li>What did teachers understand particular questions to mean?</li>
+                                        <li>What examples of practice did teachers think about when they answered the questions?</li>
+                                        <li>How did these practices come about? And what sustained them? </li>
+                                        <li>What constraints did teachers feel in relation to practices that they valued but felt they could not use with their learners?</li>
+                                    </ul> 
+                                </p>
+                                <p>Discussions can take place over time, focusing on aspects that are of most interest to the school and its inquiry, review, and planning.</p>
+                                <p>You can include discussions in leadership meetings, departmental meetings, and staff meetings. Short focused discussions of 30 minutes can work well if they have a good structure, and staff take an interactive role.</p>
+                                <p>Many schools are using inquiry cycles to increase the effectiveness of their work, and to strengthen the way staff work together. The Teaching and School Practices information will make a useful contribution to such inquiry processes.</p>
+                                <h4 class="myh4">Teams in schools can share their responses</h4>
+                                <p>Where appropriate — in schools where there is good trust — leadership teams, syndicates, and departments will find value in printing off their individual responses when they complete the survey, sharing their responses, and unpacking what lies behind common responses, and different responses.</p>
+                                <p>Individual teachers will find value in printing off their own response when they complete the survey, and drawing on it when they review their practice for appraisal.</p>
+                                <p>Comparing responses a year apart can be a useful gauge of how things have changed, and what difference the work a teacher has done to change or maintain things in their practice has made. </p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#reports-nav a').addClass('active');
+    $('#use-reports-nav').addClass('active');
+});
+</script>
+{% endblock %}

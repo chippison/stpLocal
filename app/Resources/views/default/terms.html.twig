@@ -1,0 +1,49 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh; font-family: 'Roboto',sans-serif;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3>Term of Use</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ol>
+                                    <li>
+                                        <p style="font-weight: bold;">Privacy Statement</p>
+                                        <p>
+                                            Access to data and reporting contained on the website is password controlled. Users must have an account associated with a particular school in order to access the data and reporting associated with the school. A school website administrator controls who has access to the school's data and what portion of this data they can access. School's must have an up-to-date subscription to the website in order to make use of the site in the current year.
+                                        </p>
+                                        <p>
+                                            Unless directed otherwise by individual schools, NZCER reserves the right to use data entered on the website for test development purposes. Test development encompasses activities such as checking achievement norms and item calibrations, and comparing achievement across population subgroups. All features that could be used to identify a school, class or individual student are removed before data is used in this manner.
+                                        </p>
+                                        <p>
+                                            NZCER will only use user information to communicate with users. All personal information, including email addresses are kept securely and will not be shared with a third party.
+                                        </p>
+                                        <p>
+                                            The assessment data belongs to the individual schools and remains under the ownership of each school whilst hosted on the NZCER Marking website. Should NZCER be approached for access to any assessment data, the requester would be referred directly back to the owner of the data at the relevant school.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p style="font-weight: bold;">Protection of copyrighted test materials</p>
+                                        <p>The site provides access to test questions and materials for which NZCER holds the copyright. These are provided so that schools can view reports at the question level and administer tests online. To maintain the integrity of the test these should not be distributed, or published without the permission of NZCER.</p>
+                                    </li>
+                                    <li>
+                                        <p style="font-weight: bold;">Cancellation of subscription</p>
+                                        <p>Schools can cancel their subscription to the site at any time and they will just have to email <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

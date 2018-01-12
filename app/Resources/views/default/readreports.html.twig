@@ -1,0 +1,72 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">What the reports look like</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                   On the dashboard the principal or administrator can download these reports:
+                                    <ul>
+                                        <li>Teaching Practices</li>
+                                        <li>School Practices</li>
+                                        <li>Principal Leadership</li>
+                                        <li>Teacher workload and morale</li>
+{#                                         <li>What teachers get from Kāhui Ako activity if the school is part of a Kāhui Ako</li>#}
+                                    </ul>
+                                </p>
+                                <p>
+                                    The School practices and Principal leadership reports come in two different formats:
+                                    <ul>
+                                        <li>the combined responses from all the teachers</li>
+                                        <li>showing the responses from all the teachers, with the principal’s own response shown separately</li>
+                                    </ul>
+                                </p>
+                                <p>The second format can only be accessed by principals. It enables them to see any differences between their own responses and teachers’ responses. This can be a powerful starter for reflection and inquiry. We provide this separately to preserve confidentiality. Principals can choose whether to share this second report format with their staff and others they work with.</p>
+                                <h4 class="myh4">If your school has 5 or more teachers responding you’ll get reports that look like this</h4>
+                                <p>These bar charts show the proportion of teachers who chose each of the response options, for each of the questions. </p>
+                                <p>
+                                    <img src="{{ asset('images/Ts1-1.jpg') }}">
+                                    <img src="{{ asset('images/Ts1-2.jpg') }}">
+                                    <img src="{{ asset('images/Ts1-3.jpg') }}">
+                                </p>
+                                <p>The total number of teachers who took part in the school’s survey is given at the top of each report.</p>
+                                <p>The number of non-responses for each question is presented to the right of the bar chart. The number of non-responses can give an indication of how many teachers felt either they did not know the answer or could not decide which answer to pick.</p>
+                                <h4 class="myh4">If your school has 3 or 4 teachers responding you’ll get reports that look like this</h4>
+                                <p>To preserve confidentiality, reports where there are fewer than 5 teachers give median responses to each of the survey questions. </p>
+                                <p>
+                                    <img src="{{ asset('images/Ts2-1.jpg') }}">
+                                    <img src="{{ asset('images/Ts2-2.jpg') }}">
+                                    <img src="{{ asset('images/Ts2-3.jpg') }}">
+                                </p>
+                                <h4 class="myh4">If your school has fewer than 3 teachers responding</h4>
+                                <p>We can’t provide you with a report since with small numbers it might be possible to identify individual responses.  What some small schools have done is to do the survey, print out their responses, and looked at those together. This approach needs to be voluntary, and is appropriate where principal and teacher(s) have a high degree of trust.</p>
+                                <h4 class="myh4">Over time</h4>
+                                <p>If you do the TSP annually or biennially, you’ll also get reports showing what has changed over the period. </p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#reports-nav a').addClass('active');
+    $('#read-reports-nav').addClass('active');
+});
+</script>
+{% endblock %}

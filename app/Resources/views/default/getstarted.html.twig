@@ -1,0 +1,121 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">Getting Started</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Welcome to the Teaching and School Practices survey tool.  Here we outline the key steps and decisions to help you get started. You can follow this on screen or print it for reference.
+                                </p>
+                                <p>Before you register, we recommend that you:
+                                    <ul>
+                                        <li>browse the information provided on this website to learn more about the tool and what it can do</li>
+                                        <li>introduce the tool to your staff.</li>
+                                    </ul>
+                                </p>
+                                <h4 class="myh4">Introducing the tool to the school’s staff</h4>
+                                <p>The tool is designed to yield a rich set of information for your school. It involves teachers and the principal completing a brief survey.</p>
+                                <p>The higher teachers’ participation rate, the more reliable your school report will be. We therefore recommend that you introduce the survey tool at a staff meeting, and encourage everyone to take part, since all should benefit. It’s helpful to emphasise the value you place on having this collective picture, and that you intend it to have a practical use in the ongoing development of the school.</p>
+                                <p>We suggest highlighting to staff the importance of honest responses. Reassure them that their responses are anonymous and only grouped data is reported.</p>
+                                <p>We also suggest that you consider ways to maximise teacher participation in advance.  It’s helpful to plan the survey as a school-wide activity some time ahead, choosing a brief period (2-3 weeks) that will not be too busy for staff. You could set aside a given time or use existing staff meeting time for teachers to do it at the same time, individually. Teachers and the principal can complete the survey in one sitting, or stop and complete it later using their password.</p>
+                                <p>Offering a small celebration if the participation rate reaches 75% or more could be an additional incentive.</p>
+                                <h4 class="myh4">The principal registers the school</h4>
+                                <p>The principal registers the school using the link on the left hand side of the website <a href="http://www.tspsurveys.org.nz">www.tspsurveys.org.nz.</a></p>
+                                <p>The principal will need to provide their email address, decide on a password (requires at least 8 characters, with one capitalised character and a number), and enter the school’s MOE number (the name of your school will then be shown).</p>
+                                <h4 class="myh4">Every school needs an survey administrator</h4>
+                                <p>You’ll need a survey administrator. This may be you (the principal) or someone else in the school.</p>
+                                <p>If you choose someone else, type in their email address and create a password for them. This email address and password must differ from your own.</p>
+                                <h4 class="myh4">Managing the survey process</h4>
+                                <p>
+                                    Managing the survey process is not onerous, but some extra tasks are required. The administrator will:
+                                    <ul>
+                                        <li>email all teachers with their school survey link, indicating a completion date</li>
+                                        <li>monitor the number of responses (but they cannot see the individual responses)</li>
+                                        <li>send out a reminder email if needed before the set completion date</li>
+                                        <li>access the tool's dashboard to download the school reports showing the overall school results (i.e. the combined data from the teachers’ responses) on completion date.</li>
+                                    </ul>
+                                </p>
+                                <p>The principal's results are not included in the school reports that the administrator downloads. The principal accesses the dashboard to get the school reports which include their responses.  This step is in place to ensure confidentiality for the principal.</p>
+                                <b>If the Principal administers the survey</b>
+                                <p>
+                                    The principal immediately receives the following emails:
+                                    <ol>
+                                        <li>TSP Administration and Reporting instructions for Principals
+                                            <p>Includes username and password details from the registration process. This lets you login to monitor progress and access all the school reports </p> 
+                                        </li>
+                                        <li>
+                                            TSP Principal welcome and survey
+                                            <p>Includes your survey password and link to the survey. You can download a copy of your responses at the end. </p>
+                                        </li>
+                                        <li>
+                                            TSP Administrator instructions for Teacher Survey
+                                            <p>Includes a draft email for the principal to personalise and forward to teachers. This email has a link that lets teachers register for the survey tool. As part of registering each teacher will be sent a unique password to do the survey.</p>
+                                        </li>
+                                    </ol>
+                                </p>
+                                <b>If someone else at the school administers the survey</b>
+                                <p>
+                                    They will get these emails as soon as the principal has registered:
+                                    <ol>
+                                        <li>
+                                            TSP Administration and reporting instructions
+                                            <p>Includes username and password details from the registration process. This lets the administrator login to monitor progress and access the school reports which contain teacher responses but not those that include the principal’s response.</p>
+                                        </li>
+                                        <li>
+                                            TSP Administrator instructions for Teacher Survey
+                                            <p>Includes a draft email for the administrator to personalise and forward to teachers. It has a link that lets teachers register for the survey tool. As part of registering, each teacher will be sent a unique password to do the survey.</p>
+                                        </li>
+                                    </ol>
+                                </p>
+                                <p>
+                                    And the principal will receive these emails:
+                                    <ol>
+                                        <li>
+                                            TSP Administration and Reporting instructions for Principals
+                                            <p>Includes username and password details from the registration process. This will let the principal login to access all the school reports (including those with their own responses compared with teachers’ responses).</p>
+                                        </li>
+                                        <li>
+                                            TSP Principal welcome and survey
+                                            <p>Includes a survey password and link to do the survey.</p>
+                                        </li>
+                                    </ol>
+                                </p>
+                                <h4 class="myh4">Teachers get an email invitation to register</h4>
+                                <p>
+                                    Teachers get the email about the survey from their school’s administrator. They follow the link to register, and then get an email with a unique password to do the survey. Participation is voluntary.
+                                </p>
+                                <p>
+                                    Teachers can complete the survey in one sitting, or stop and complete it later using their password. They can download a copy of their responses at the end.  
+                                </p>
+                                <h4 class="myh4">School reports are available immediately</h4>
+                                <p>
+                                    Once the survey period is complete and you feel you have sufficient responses, you can get the reports immediately. See <a href="{{ path('use-reports') }}">Using the Reports</a> for further information.
+                                </p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us on <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a> if you have any questions about registration, the survey process, or the reports.</p>
+                                <p>We will respond by email or arrange a time to talk to you by phone. Professional support is being provided by experienced teachers and IT technicians to ensure the smooth running of the survey tool.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#get-started-nav a').addClass('active');
+});
+</script>
+{% endblock %}

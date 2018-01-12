@@ -1,0 +1,168 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" />
+ <style>
+ 
+ </style> 
+ {% endblock %}
+ {% block main_body %}
+ <div class="section section-light-nude" style="min-height: 75vh">
+     {% set roles = app.session.get('roles') %}
+    <div class="container">
+        <div class="row">
+            <h4 style="margin-top: 0px;padding-left: 20px">Dashboard</h4>
+        </div>
+        {% if data[yr] is defined %}
+        <div class="row">
+           {% for d in data[yr] %}
+                <div class="col-md-6">
+                <div class="card">
+                    <div class="header" style="padding: 20px 20px">
+                        <h3 class="panel-title"><a data-toggle="collapse" href="#assess{{ loop.index }}">{{ d.label }}</a></h3>
+                    </div>
+                    <div id="assess{{ loop.index }}" class="collapse in">
+                    <div class="content">
+                        <div style="font-size: 0.9em">
+                        {% if d.test_id == 73 %}
+                        {% set lbl = 'teacher' %}
+                            Registration URL : {{ app.request.getSchemeAndHttpHost()~'/registersurvey/'~lbl~'/'~d.ms_id }}
+                        {% else %}
+                            {%  if 16 in roles%}
+                                Principal Password: <a href="{{ survey_url ~'/quiz_backbone?token=' ~ d.token}}">{{d.token}}</a>
+                            {% else %}
+                                &nbsp;
+                            {% endif %} 
+                        {% endif %}
+                        </div>
+                        <div>
+                            Registered and started: {{ d.withdata }}
+                        </div>
+                        <div>
+                            Registered and not started: {{ d.nodata }}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+           {% endfor %}
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="panel-title">Reports</h3></div>
+{#                     <div class="content">#}
+{#                         <div class="row" style="margin-top: 10px">#}
+{#                             <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpTP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpTP'}) }}'); return false;" target="_blank">Teaching Practices Report</a>#}
+{#                             </div>#}
+{#                              <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpSP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpSP'}) }}'); return false;" target="_blank">School Practices Report</a>#}
+{#                             </div>#}
+{#                              <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpPL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpPL'}) }}'); return false;" target="_blank">Principal Leadership Report</a>#}
+{#                             </div>#}
+{#                         </div>#}
+{#                         {% set roles = app.session.get('roles') %}#}
+{#                         {%  if 16 in roles%}#}
+{#                         <div class="row" style="margin-top: 10px">#}
+{#                             <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpTP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpTP'}) }}'); return false;" target="_blank">Teaching Practices Report with Principal Data</a>#}
+{#                             </div>#}
+{#                              <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpSP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpSP'}) }}'); return false;" target="_blank">School Practices Report with Principal Data</a>#}
+{#                             </div>#}
+{#                              <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpPL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpPL'}) }}'); return false;" target="_blank">Principal Leadership Report with Principal Data</a>#}
+{#                             </div>#}
+{#                         </div>#}
+{#                         {% endif %}#}
+{#                         <div class="row" style="margin-top: 10px">#}
+{#                         <div class="col-md-4">#}
+{#                             <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpWL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpWL'}) }}'); return false;" target="_blank">Teacher Workload and Morale Report</a>#}
+{#                         </div>#}
+{#                         </div>#}
+{#                     </div>#}
+                    <div class="content">
+                        <ul class="nav nav-tabs" id="tspReportTab">
+{#                             <li class=""><a data-toggle="tab" href="#2017-wrapper" class="tablink" rel="2017">2017</a></li>#}
+{#                             <li class=""><a data-toggle="tab" href="#2018-wrapper" class="tablink" rel="2018">2018</a></li>#}
+                               {% for d in data|keys %}
+                                   {% if(loop.last) %}
+                                   {% set me = 'active' %}
+                                   {% else %}
+                                   {% set me = '' %}
+                                   {% endif %}
+                                   <li class="{{ me }}"><a data-toggle="tab" href="#{{ d }}-wrapper" class="tablink" rel="{{ d }}">{{ d }}</a></li>
+                               {% endfor %}
+                                
+                        </ul>
+                        <div class="tab-content">
+{#                             <div id="2017-wrapper" class="tab-pane fade in active">#}
+{#                                 I am in 2017 report page#}
+{#                             </div>#}
+{#                             <div id="2018-wrapper" class="tab-pane fade">#}
+{#                                 I am in 2018 report page#}
+{#                             </div>#}
+                              {% for d in data|keys %}
+                                <div id="{{ d }}-wrapper" class="tab-pane fade {% if loop.last == 1 %}in active{% endif %}">
+                                   {% if(data[d][0]['test_id'] == 73) %}
+                                      {% set tid =  data[d][0]['ms_id'] %}
+                                   {% elseif (data[d][0]['test_id'] == 74) %}
+                                      {% set pid =  data[d][0]['ms_id'] %}
+                                   {% endif %}
+                                   {% if(data[d][1]['test_id'] == 73) %}
+                                      {% set tid =  data[d][1]['ms_id'] %}
+                                   {% elseif (data[d][1]['test_id'] == 74) %}
+                                      {% set pid =  data[d][1]['ms_id'] %}
+                                   {% endif %}
+                                   <div class="content">
+                                    <div class="row" style="margin-top: 10px">
+                                        <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpTP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpTP'}) }}'); return false;" target="_blank">Teaching Practices Report</a>
+                                        </div>
+                                         <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpSP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpSP'}) }}'); return false;" target="_blank">School Practices Report</a>
+                                        </div>
+                                         <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpPL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpPL'}) }}'); return false;" target="_blank">Principal Leadership Report</a>
+                                        </div>
+                                    </div>
+                                    {% set roles = app.session.get('roles') %}
+                                    {%  if 16 in roles%}
+                                    <div class="row" style="margin-top: 10px">
+                                        <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpTP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpTP'}) }}'); return false;" target="_blank">Teaching Practices Report with Principal Data</a>
+                                        </div>
+                                         <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpSP'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpSP'}) }}'); return false;" target="_blank">School Practices Report with Principal Data</a>
+                                        </div>
+                                         <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':pid,'tid':tid,'type':'stpPL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':pid,'tid':tid,'type':'stpPL'}) }}'); return false;" target="_blank">Principal Leadership Report with Principal Data</a>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    <div class="row" style="margin-top: 10px">
+                                    <div class="col-md-4">
+                                        <a href="{{ path('stp',{'pid':0,'tid':tid,'type':'stpWL'}) }}" onclick="trackOutboundLink('{{ path('stp',{'pid':0,'tid':tid,'type':'stpWL'}) }}'); return false;" target="_blank">Teacher Workload and Morale Report</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                              {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ {% endblock %}
+ {% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#home-nav a').addClass('active');
+});
+</script>
+{% endblock %}

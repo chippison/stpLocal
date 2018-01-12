@@ -1,0 +1,187 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">How we developed the Teaching and School Practices survey tool</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="myh4">Why this tool?</h4>
+                                <p>How do you support busy leaders and teachers to take advantage of the strong body of evidence now available about effective teaching and effective school practices which support learning?</p>
+                                <p>How do we know what is happening nationally, so that the Ministry of Education and other government education agencies can see what the strengths and needs are of our schools, and whether policy is having its intended effect?</p>
+                                <p>The Teaching and School Practices Survey Tool is designed to answer both these questions. The Ministry of Education commissioned NZCER to develop and provide the tool, building on NZCER’s previous work developing and administering the Educational Leadership Practices survey.</p>
+                                <p>
+                                    The tool that you can access now is the result of an extensive development process, including:
+                                    <ul>
+                                        <li>a review of current and relevant research</li>
+                                        <li>identification of domains (topic areas) to cover</li>
+                                        <li>creating or finding specific questions that exemplified each domain and would be of practical use to schools</li>
+                                        <li>discussion of our work with a strong Advisory Group</li>
+                                        <li>in-house trial with recent teachers to refine the questions for the online trial</li>
+                                        <li>online trial of a set of questions with 38 schools</li>
+                                        <li>psychometric analysis of the results to see how the questions in each domain related to each other, showing that they were giving evidence of a common concept</li>
+                                        <li>refinement of the questions and reducing the total number, using comments made by teachers and principals in the trial, the results of the psychometric analysis, and Advisory Group discussion</li>
+                                        <li>feedback from trial school principals and the Advisory Group on the use of the tool.</li>
+                                    </ul>     
+                               </p>
+                                <h4 class="myh4">A strong Advisory Group</h4>
+                                <p>It was essential to have a strong Advisory Group informing and supporting this work. It was also vital to bring together sector group leaders, the government agencies, researchers and professional development providers, to ensure different knowledge and expertise was brought into play, and that we forged common ground.</p>
+                                <p>We thank the Advisory Group members for their stimulating and productive discussions, practical support with the trial, and their enthusiasm about the tool and its usefulness for schools and providing a national picture.</p>
+                                <p>Our Advisory Group met three times:
+                                    <ul>   
+                                        <li>to discuss background papers on the domains we suggested should be included in the surveys, with the research behind them</li>
+                                        <li>to give feedback and try out the draft items we developed to take to the trial, and</li>
+                                        <li>to discuss the trial results and help us finalise the items to include in the survey now available. </li>
+                                    </ul>
+                                </p>
+                                <p>Our Advisory Group will meet again late in 2017 to discuss the national report coming from the use of the Teaching and School Practices survey tool in Terms 2 and 3.
+                               </p>
+                               <h4 class="myh4">Advisory Group Members</h4>
+                               <p>
+                                    <ul>
+                                        <li>Robyn Baker (consultant, heading the TLIF team, formerly Director, NZCER)</li>
+                                        <li>Pauline Barnes (Education Council)</li>
+                                        <li>Mere Berryman (University of Waikato; replaced by Therese Ford for one meeting)</li>
+                                        <li>Mary Chamberlain (Evaluation Associates)</li>
+                                        <li>Whetu Cormack  (NZPF President, principal Bathgate School)</li>
+                                        <li>Robyn Gibbs (Ministry of Education)</li>
+                                        <li>Mary Hall (NZSTA)</li>
+                                        <li>Stuart McNaughton (University of Auckland, Chief Science Advisor Ministry of Education)</li>
+                                        <li>Frances Nelson (convenor for the Centre of Leadership Excellence at the Education Council  principal of Fairburn school)</li>
+                                        <li>Mark Potter (NZEI Executive, principal Berhampore school)</li>
+                                        <li>Sally Scott (Ministry of Education)</li>
+                                        <li>Paula Pope (Ministry of Education); replaced by Vicki Wilde at meeting 3)</li>
+                                        <li>Jenny Poskitt (Massey University)</li>
+                                        <li>Ro Parsons (ERO)</li>
+                                        <li>Claire Sinnema (University of Auckland)</li>
+                                        <li>Linda Stockham (Education Council)</li>
+                                        <li>Gary Sweeney  (NZAIMS,  principal Pukekohe Intermediate)</li>
+                                        <li>Denise Torrey (principal Somerfield school)</li>
+                                        <li>Melanie Webber (PPTA Vice President)</li>
+                                        <li>Mike Williams  (SPANZ Vice President and President from 2017, principal Pakuranga College)</li>
+                                        <li>Howard Youngs (AUT)</li>
+                                    </ul>
+                               </p>
+                                <h4 class="myh4">38 schools trialled the Teaching and School Practices tool</h4>
+                                <p>38 schools took part in the trial, which ran during March 2017.   They gave a sound cross-section of school types and socio-economic decile: </p>
+                                <p>
+                                    <table style="width: 70%" class="table table-bordered">
+                                        <tbody>
+                                            <tr style="font-weight: bold">
+                                                <td>Contributing</td>
+                                                <td>Full Primary</td>
+                                                <td>Intermediate</td>
+                                                <td>Secondary<br/>(Years 7-15)</td>
+                                                <td>Secondary<br/>(Years 9-15)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>9</td>
+                                                <td>5</td>
+                                                <td>3</td>
+                                                <td>6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </p>
+                                <p>
+                                    <table style="width: 80%" class="table table-bordered">
+                                        <tbody>
+                                            <tr style="font-weight: bold">
+                                                <td style="width: 20%">Decile</td>
+                                                <td style="width: 7%">1</td>
+                                                <td style="width: 7%">2</td>
+                                                <td style="width: 7%">3</td>
+                                                <td style="width: 7%">4</td>
+                                                <td style="width: 7%">5</td>
+                                                <td style="width: 7%">6</td>
+                                                <td style="width: 7%">7</td>
+                                                <td style="width: 7%">8</td>
+                                                <td style="width: 7%">9</td>
+                                                <td style="width: 7%">10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Number of Schools</td>
+                                                <td>5</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                                <td>1</td>
+                                                <td>7</td>
+                                                <td>2</td>
+                                                <td>6</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </p>
+                                <p>
+                                    440 teachers (165 primary, 66 intermediate and 209 secondary), 17 non-teaching school leaders (a total of 457 teachers) took part in the survey, and 36 principals.
+                                </p>
+                                <h4 class="myh4">Feedback improved the Teaching and School Practices tool</h4>
+                                <p>We asked for feedback at the end of each set of questions (by domain), particularly around any questions that did not make sense or where the wording could be improved. We also asked how long the survey had taken and for overall comments at the end. This feedback identified some questions that were not sufficiently clear. This reinforced the need to keep the survey as short as we could  —  while covering the ground and providing useful specific information. It gave us some assurance that the questions were seen as useful.  We got some very positive feedback from principals on the insight they gained from the reports for their school, and their usefulness. </p>
+                                <h4 class="myh4">Psychometric analysis gives assurance</h4>
+                                <p>
+                                    Psychometric analysis came next. We did this for three reasons:
+                                    <ul>
+                                        <li>To ensure that the questions we asked in each domain were conceptually coherent, and to check that each domain had a strong association with other domains. The analysis showed that we are able to construct robust scales using combined domains.</li>
+                                        <li>To see whether each domain had a range of questions in terms of how they were scored (in technical terms the ‘difficulty’ level). We wanted respondents to have information about practices that were relatively common, and also practices that were relatively uncommon.</li>
+                                        <li>To check whether the response scales for the questions gave us enough differentiation.</li>
+                                    </ul>
+                                </p>
+                                <h4 class="myh4">Shortening and strengthening the surveys</h4>
+                                <p>
+                                    The NZCER team used the feedback from trial participants and the psychometric analysis to shorten the surveys. We still include a range of questions for each domain.  The psychometric analysis also highlighted the need to change the response scale for the Teaching Practices survey, to provide more differentiation.
+                                </p>
+                                <p>We took our shortened version to the Advisory Group for their review, to ensure that the survey would be clear and meet people’s needs. Some further refinements were made.</p>
+                                <p>We then checked that the final set of questions for each domain had conceptual coherence. The psychometric analysis gave us assurance that the survey we provide here gives a valid picture for individual schools, for Kāhui Ako, and at the national level.</p>
+                                <h4 class="myh4">We’ll continue to develop the Teaching and School Practices survey tool</h4>
+                                <p>
+                                    Wide use of the Teaching and School Practices survey tool in Term 2 and 3 2017 will allow us to do two things:
+                                    <ul>
+                                        <li>Provide a nationally representative picture of teaching and school practices and principal leadership, including looking at any differences related to school type and context</li>
+                                        <li>Develop a national benchmark so that from 2018 schools can compare the results for their school with a common standard.</li>
+                                    </ul>    
+                                </p>
+                                <p>We will work with our Advisory Group to ensure the usefulness of the national picture and benchmarks.</p>
+                                <p>We will also make any improvements to the tool or the website that are indicated by the first year’s use.</p>
+                                <p>We welcome any comments or thoughts you have about the Teaching and School Practices tool. Please let us know how you have used it also!  Contact:  <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                                <h4 class="myh4">The NZCER development team</h4>
+                                <p>
+                                    <ul>
+                                        <li>Cathy Wylie: responsible for the School Practices and Principal Leadership sections (Cathy originally co-developed the Educational Leadership Practices survey with Viviane Robinson)</li>
+                                        <li>Sue McDowall and Jenny Whatman: responsible for the Teaching Practices section</li>
+                                        <li>Hilary Ferral: responsible for psychometric analysis and design of reports back to principals  (she previously undertook the psychometric analysis and reporting design work for the Educational Leadership Practices survey)</li>
+                                        <li>Heleen Visser: team leader, also responsible for leading the work with the on-line team</li>
+                                        <li>Rachel Felgate: responsible for statistical analysis</li>
+                                        <li>Our on-line team:  Paul Shih, Chip Pison, Matt  Nichols</li>
+                                        <li>Our school services team:  Leah Saunders, Ben Gardiner</li>
+                                    </ul>
+                                </p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#more-about-nav a').addClass('active');
+    $('#development-nav').addClass('active');
+});
+</script>
+{% endblock %}

@@ -1,0 +1,67 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">For Kāhui Ako</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    The Teaching and School Practices tool offers Kāhui Ako good quality information about practices in member schools that will be useful in
+                                    <ul>
+                                        <li>understanding the Kāhui Ako’s strengths and needs, alongside achievement data and student engagement data. Teachers and principals in Kāhui Ako also answer a small set of additional questions about what they are getting from their Kāhui Ako participation.</li>
+                                        <li>deciding what to focus on in across-school work, Ministry of Education-funded PLD, other PLD, and the development and support of leadership</li>
+                                        <li>charting changes over time, in relation to what your focus has been</li>
+                                    </ul>
+                                </p>
+                                <h4 class="myh4">We can customise reports for you</h4>
+                                <p>We offer you free aggregated reports for all your Kāhui Ako schools, that look like the reports schools get (<a href="{{ path('read-reports') }}">What the reports look like</a>) without identifying individual schools, teachers, or principals. These reports will be prepared by NZCER staff on request and could include the following.</p>
+                                <p>Set 1 – teachers’ responses aggregated, also showing principals’ responses aggregated</p>
+                                <p>Set 2 – teachers’ responses aggregated across all the schools that have taken part in the Teaching and School Practices Survey Tool</p>
+                                <p>If you do the Teaching and School Practices survey every year or two years, you’ll also get a report showing what has changed over the period.</p>
+                                <p>We can also customise these aggregated reports for you. We know that Kāhui Ako are bringing together teachers working at different year levels, such as years 0-3, 4-6, 7-8, 9-10. You can get a picture of the responses for the year-level groupings you specify.</p>
+                                <p>We know that some Kāhui Ako are also thinking about the development of middle leaders. You can get a picture of the responses in relation to teachers’ role in the school.</p>
+                                <h4 class="myh4">A useful community builder</h4>
+                                <p>The Teaching and School Practices tool offers a Kāhui Ako the opportunity for all its member schools to do something together that is reasonably quick and lets the schools and teachers see themselves on the same page soon after they’ve done the survey.</p>
+                                <p>It provides a shared picture for discussion in different Kāhui Ako forums, alongside other information. It gives Kāhui Ako leaders and across-school teachers very useful insights and focus for their work.</p>
+                                <h4 class="myh4">Protocols</h4>
+                                <p>In these early days of Kāhui Ako, different Kāhui Ako are at different places in terms of their comfort in sharing individual school data with each other.  We think it will be valuable for individual schools to share their Teaching and School Practices reports with the Kāhui Ako leader or across-school teacher. Individual school reports give a fuller picture of strengths and needs, and where the Kāhui Ako resources are best placed.  The decision to share individual school data remains with the school principal.</p>
+                                <h4 class="myh4">Role of the Kāhui Ako leader</h4>
+                                <p>Kāhui Ako leaders can send the link to this site: <a href="https://www.tspsurveys.org.nz">www.tspsurveys.org.nz</a> to fellow principals to recommend the Teaching and School Practices tool, and seek agreement from member schools. We would suggest also working out a time-frame for when the survey would be done (see Getting Started for pointers).</p>
+                                <p>Email us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys.nzcer.org.nz</a> to let us know your Kāhui Ako has agreed to take part.</p>
+                                <p>When principals register their school, they also need to indicate their desire for their school data to be included in their Kāhui Ako aggregated data.</p>
+                                <p>
+                                    Once you have an agreed start and completion date, the Kāhui Ako leader can email principals to check progress. We suggest:
+                                    <ul>
+                                        <li>emailing just before the start date,</li>
+                                        <li>checking on response numbers 2 weeks out from the completion date</li>
+                                        <li>checking a week from the completion date.</li>
+                                    </ul> 
+                                </p>
+                                <p>You may need to extend the completion date to ensure as many teachers as possible have participated.</p>
+                                <p>We provide the Kāhui Ako leader with the aggregated reports once we have heard from you that all the schools have completed the survey. We ask you to tell us what customisation you want in the reports.</p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#kahui-nav a').addClass('active');
+});
+</script>
+{% endblock %}

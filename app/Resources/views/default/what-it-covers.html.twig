@@ -1,0 +1,99 @@
+ {% extends 'landing.html.twig' %}
+ {% block headscripts %}
+ {{ parent() }}
+ <link href="{{ asset('css/paper/paper-dashboard.css') }}" rel="stylesheet" /> 
+ {% endblock %}
+{% block main_body %}
+<div class="section section-light-nude" style="min-height: 75vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header"><h3 class="myh3">What it covers</h3></div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Welcome to the Teaching and School Practices survey tool.  Here we outline the key steps and decisions to help you get started. You can follow this on screen or print it for reference.
+                                </p>
+                                <p>Before you register, we recommend that you:
+                                    <ul>
+                                        <li>browse the information provided on this website to learn more about the tool and what it can do</li>
+                                        <li>introduce the tool to your staff.</li>
+                                    </ul>
+                                </p>
+                                <h4 class="myh4">The survey tool covers three aspects of practice and leadership</h4>
+                                <p>
+                                    You can find out about the questions in each part of the survey on this page
+                                    <ul>
+                                        <li><a href="#tp">Teaching practices</a></li>
+                                        <li><a href="#sp">School practices</a></li>
+                                        <li><a href="#pl">Principal Leadership</a></li>
+                                    </ul>
+                                </p>
+                                <a name="tp" class="anchor"><h4 class="myh4">Teaching practices</h4></a>
+                                <p>Teachers and teaching principals complete this part of the survey.</p>
+                                <p>
+                                    The Teaching practices questions focus on five important domains in terms of effective teaching and teacher inquiry in the current New Zealand context.
+                                    <ul>
+                                        <li>Optimising students’ opportunities to learn</li>
+                                        <li>Diversity, equity, and inclusion</li>
+                                        <li>Learning-focused partnerships</li>
+                                        <li>Teaching as inquiry</li>
+                                        <li>Being professional</li>
+                                    </ul>
+                                </p>
+                                <p>To find out more <a href="{{ path('teaching-practices') }}">Teaching Practices</a></p>
+                                <b>What do the questions look like?</b>
+                                <p>
+                                    Here are some examples, one from each domain:
+                                    <img style="margin-top: 10px" src="{{ asset('images/T1.jpg') }}">
+                                    <img style="margin-top: 10px" src="{{ asset('images/T2.jpg') }}">
+                                </p>
+                                <p>Teachers also provide some information about their teaching experience, role, workload and morale. If the school is part of a Kāhui Ako, they answer a few questions about their experience of it.</p>
+                                <h4 class="myh4">School practices</h4>
+                                <p>Teachers and principals complete this part of the survey.</p>
+                                <p>
+                                    The School Practices questions focus on practices that provide the conditions for effective teaching. The six domains covered are:
+                                    <ul>
+                                        <li>School goals</li>
+                                        <li>Supportive and caring environment</li>
+                                        <li>Coherent curriculum and evaluation</li>
+                                        <li>Learning-focused partnerships</li>
+                                        <li>Strategic resource allocation</li>
+                                        <li>Developing professional practice</li>
+                                    </ul>
+                                </p>
+                                <p>To find out more <a href="{{ path('school-practices') }}">School Practices and Principal Leadership</a></p>
+                                <b>What do the questions look like?</b>
+                                <p>
+                                    Here are some examples, one from each domain:
+                                    <img style="margin-top: 10px" src="{{ asset('images/T3.jpg') }}">
+                                </p>
+                                <h4 class="myh4">Principal leadership</h4>
+                                <p>Teachers and principals answer questions about the way the principal leads the school.</p>
+                                <p>To find out more <a href="{{ path('school-practices') }}">School Practices and Principal Leadership</a></p>
+                                <b>What do the questions look like?</b>
+                                <p>Here are some examples:<br/>
+                                    <img style="margin-top: 10px" src="{{ asset('images/T4.jpg') }}">
+                                </p>
+                                <p>Principals also provide some information about their experience as a principal, and their workload and support they have for the role. If the school is part of a Kāhui Ako, they answer a few questions about their experience of it.</p>
+                                <h4 class="myh4">Any questions?</h4>
+                                <p>Please contact us at <a href="mailto://tspsurveys@nzcer.org.nz">tspsurveys@nzcer.org.nz</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block user_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#more-about-nav a').addClass('active');
+    $('#what-it-covers-nav').addClass('active');
+});
+</script>
+{% endblock %}
